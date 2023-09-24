@@ -56,7 +56,7 @@ fn player_movement(
 }
 
 fn spawn_player(mut commands: Commands, asset_server: Res<AssetServer>) {
-    let texture = asset_server.load("ranger.png");
+    let texture = asset_server.load("sprites_defacto/Jake.png");
 
     commands.spawn((
         SpriteBundle {

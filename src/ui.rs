@@ -56,6 +56,6 @@ fn update_exp_ui(
 	experience: Res<Experience>,
 ) {
 	for mut text in &mut texts {
-		text.sections[0].value = format!("Experience:  ${:?}", experience.0);
+		text.sections[0].value = format!("Experience:  {:?}", experience.0);
 	}
 }
