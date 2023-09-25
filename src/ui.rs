@@ -41,7 +41,7 @@ fn spawn_game_ui(mut commands: Commands, asset_server: Res<AssetServer>) {
                             font: font.clone(),
                             font_size: 32.0,
                             color: Color::WHITE,
-							..default()
+                            ..default()
                         },
                     ),
                     ..default()
@@ -51,11 +51,8 @@ fn spawn_game_ui(mut commands: Commands, asset_server: Res<AssetServer>) {
         });
 }
 
-fn update_exp_ui(
-	mut texts: Query<&mut Text, With<ExpText>>,
-	experience: Res<Experience>,
-) {
-	for mut text in &mut texts {
-		text.sections[0].value = format!("Experience:  {:?}", experience.0);
-	}
+fn update_exp_ui(mut texts: Query<&mut Text, With<ExpText>>, experience: Res<Experience>) {
+    for mut text in &mut texts {
+        text.sections[0].value = format!("Experience:  {:?}", experience.0);
+    }
 }
